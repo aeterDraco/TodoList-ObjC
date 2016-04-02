@@ -45,7 +45,9 @@
 #pragma mark - Navigation Bar
 - (void)insertNewItem:(id)sender
 {
-    // It should add a new item to the list
+    [_items addObject:[NSString stringWithFormat:@"new cell %lu", (_items.count+1)]];
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(_items.count-1) inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table view data source
@@ -69,6 +71,7 @@
     cell.textLabel.text = object;
     cell.accessibilityLabel = [NSString stringWithFormat:@"%@ %li", object, (long)indexPath.row];
     cell.accessoryView.accessibilityLabel = @"Delete";
+    cell.accessibilityLabel = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
 
     return cell;
 }
