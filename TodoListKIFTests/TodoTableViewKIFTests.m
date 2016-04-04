@@ -49,7 +49,7 @@
     }
     
     // 2. tap on the 17th which is not visible without scrolling
-    [tester tapViewWithAccessibilityLabel:@"17"];
+    [tester tapViewWithAccessibilityLabel:@"new cell 17"];
     
     // 3. go back to the table view
     [tester tapViewWithAccessibilityLabel:@"Back"];
@@ -61,11 +61,11 @@
     // This test should:
     // 1. Delete with swipe the 10th element in the list and see it's not there anymore
     UITableView *tableView = (UITableView *)[tester waitForViewWithAccessibilityLabel:@"tableView"];
-    [tester swipeViewWithAccessibilityLabel:@"10" inDirection:KIFSwipeDirectionLeft];
+    [tester swipeViewWithAccessibilityLabel:@"new cell 10" inDirection:KIFSwipeDirectionLeft];
     [tester waitForViewWithAccessibilityLabel:@"Delete"];
     [tester tapViewWithAccessibilityLabel:@"Delete"];
     
-    [tester waitForAbsenceOfViewWithAccessibilityLabel:@"10"];
+    [tester waitForAbsenceOfViewWithAccessibilityLabel:@"new cell 10"];
     NSInteger numberOfRows = [tableView numberOfRowsInSection:0];
     XCTAssertEqual(numberOfRows, 17);
 }

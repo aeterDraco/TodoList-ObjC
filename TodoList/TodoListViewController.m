@@ -45,7 +45,7 @@
 #pragma mark - Navigation Bar
 - (void)insertNewItem:(id)sender
 {
-    [_items addObject:[NSString stringWithFormat:@"new cell %lu", (_items.count+1)]];
+    [_items addObject:[NSString stringWithFormat:@"new cell"]];
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(_items.count-1) inSection:0]]
                           withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -71,7 +71,6 @@
     cell.textLabel.text = object;
     cell.accessibilityLabel = [NSString stringWithFormat:@"%@ %li", object, (long)indexPath.row];
     cell.accessoryView.accessibilityLabel = @"Delete";
-    cell.accessibilityLabel = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
 
     return cell;
 }

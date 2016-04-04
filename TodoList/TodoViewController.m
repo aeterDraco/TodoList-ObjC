@@ -37,6 +37,29 @@
 #pragma mark - Action
 - (IBAction)doneButtonPressed
 {
+    _alert = [UIAlertController alertControllerWithTitle:@"Complete the task?"
+                                                 message:nil
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    _alert.accessibilityLabel = @"Alert";
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         [_delegate deleteTodoItem:_todoItem];
+                                                     }];
+    okAction.accessibilityLabel = @"OK";
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                     }];
+    cancelAction.accessibilityLabel = @"Cancel";
+    
+    [_alert addAction:okAction];
+    [_alert addAction:cancelAction];
+    
+
+    
     [self presentViewController:_alert animated:YES completion:nil];
 }
 

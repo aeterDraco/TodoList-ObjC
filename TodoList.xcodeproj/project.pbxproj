@@ -17,10 +17,18 @@
 		63F497331CAD9CDA00A8430E /* TodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F497321CAD9CDA00A8430E /* TodoListViewController.m */; };
 		63F497361CAD9CE600A8430E /* TodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F497351CAD9CE600A8430E /* TodoViewController.m */; };
 		63F497391CAD9D1800A8430E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F497371CAD9D1800A8430E /* Main.storyboard */; };
+		8C5C67E11CB0217D00E7248E /* TodoListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C67E01CB0217C00E7248E /* TodoListUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		63F497481CADBAE400A8430E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639C83391CAD8F780021F7F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639C83401CAD8F780021F7F7;
+			remoteInfo = TodoList;
+		};
+		8C5C67E31CB0217D00E7248E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 639C83391CAD8F780021F7F7 /* Project object */;
 			proxyType = 1;
@@ -49,6 +57,9 @@
 		63F497381CAD9D1800A8430E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63F4973A1CADA33300A8430E /* TodoItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoItemDelegate.h; sourceTree = "<group>"; };
 		63F497431CADBAE400A8430E /* TodoListKIFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListKIFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5C67DE1CB0217B00E7248E /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5C67E01CB0217C00E7248E /* TodoListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoListUITests.m; sourceTree = "<group>"; };
+		8C5C67E21CB0217D00E7248E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D411E3DB7C4CBA30F931C7 /* Pods-TodoListKIFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListKIFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoListKIFTests/Pods-TodoListKIFTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9DB642B28652B47DDFD6E11 /* libPods-TodoListKIFTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodoListKIFTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C5C67DB1CB0217B00E7248E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +95,7 @@
 			children = (
 				639C83431CAD8F780021F7F7 /* TodoList */,
 				63F497441CADBAE400A8430E /* TodoListKIFTests */,
+				8C5C67DF1CB0217C00E7248E /* TodoListUITests */,
 				639C83421CAD8F780021F7F7 /* Products */,
 				BD3129E57A26C3962404EAA7 /* Frameworks */,
 				7B62C5A751023A8B764440E8 /* Pods */,
@@ -88,6 +107,7 @@
 			children = (
 				639C83411CAD8F780021F7F7 /* TodoList.app */,
 				63F497431CADBAE400A8430E /* TodoListKIFTests.xctest */,
+				8C5C67DE1CB0217B00E7248E /* TodoListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +157,15 @@
 				B7D411E3DB7C4CBA30F931C7 /* Pods-TodoListKIFTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C5C67DF1CB0217C00E7248E /* TodoListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C67E01CB0217C00E7248E /* TodoListUITests.m */,
+				8C5C67E21CB0217D00E7248E /* Info.plist */,
+			);
+			path = TodoListUITests;
 			sourceTree = "<group>";
 		};
 		BD3129E57A26C3962404EAA7 /* Frameworks */ = {
@@ -189,6 +218,24 @@
 			productReference = 63F497431CADBAE400A8430E /* TodoListKIFTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8C5C67DD1CB0217B00E7248E /* TodoListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5C67E71CB0217D00E7248E /* Build configuration list for PBXNativeTarget "TodoListUITests" */;
+			buildPhases = (
+				8C5C67DA1CB0217B00E7248E /* Sources */,
+				8C5C67DB1CB0217B00E7248E /* Frameworks */,
+				8C5C67DC1CB0217B00E7248E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5C67E41CB0217D00E7248E /* PBXTargetDependency */,
+			);
+			name = TodoListUITests;
+			productName = TodoListUITests;
+			productReference = 8C5C67DE1CB0217B00E7248E /* TodoListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +250,10 @@
 					};
 					63F497421CADBAE400A8430E = {
 						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639C83401CAD8F780021F7F7;
+					};
+					8C5C67DD1CB0217B00E7248E = {
+						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 639C83401CAD8F780021F7F7;
 					};
 				};
@@ -222,6 +273,7 @@
 			targets = (
 				639C83401CAD8F780021F7F7 /* TodoList */,
 				63F497421CADBAE400A8430E /* TodoListKIFTests */,
+				8C5C67DD1CB0217B00E7248E /* TodoListUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +290,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		63F497411CADBAE400A8430E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5C67DC1CB0217B00E7248E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,6 +374,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C5C67DA1CB0217B00E7248E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5C67E11CB0217D00E7248E /* TodoListUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -322,6 +389,11 @@
 			isa = PBXTargetDependency;
 			target = 639C83401CAD8F780021F7F7 /* TodoList */;
 			targetProxy = 63F497481CADBAE400A8430E /* PBXContainerItemProxy */;
+		};
+		8C5C67E41CB0217D00E7248E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639C83401CAD8F780021F7F7 /* TodoList */;
+			targetProxy = 8C5C67E31CB0217D00E7248E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,6 +551,30 @@
 			};
 			name = Release;
 		};
+		8C5C67E51CB0217D00E7248E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jofogas.TodoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TodoList;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8C5C67E61CB0217D00E7248E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jofogas.TodoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TodoList;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +604,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8C5C67E71CB0217D00E7248E /* Build configuration list for PBXNativeTarget "TodoListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5C67E51CB0217D00E7248E /* Debug */,
+				8C5C67E61CB0217D00E7248E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
