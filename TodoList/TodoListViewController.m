@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    self.items = [NSMutableArray arrayWithArray:@[@"Learn KIF",
+    self.items = [NSMutableArray arrayWithArray:@[@"Learn KIF dskfsdfsdfmsdfnsmdnfmsdnfsmdfnsmdnf",
                                                   @"See how Xcode UI testing works",
                                                   @"Check out FBSnapshot"]];
 
